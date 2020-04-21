@@ -41,7 +41,7 @@ ytdl_archive_list="${ytdl_root_dir%/}/archive.list"
 ytdl_format="bestvideo+bestaudio/best"
 
 # Output template for downloaded filenames
-ytdl_output_template="%(uploader)s.%(upload_date)s.%(title)s.%(resolution)s.%(id)s.%(ext)s"
+ytdl_output_template="%(title)s.%(resolution)s.%(ext)s" # %(id)s.%(uploader)s.%(upload_date)s
 
 # Write metadata to file's xattrs?
 #     * Requires the `attr` package and a filesystem that supports extended
