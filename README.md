@@ -539,6 +539,33 @@ uploads.
     To update the script to the latest version simply run `git pull` and
     merge any changes.
 
+## Title without underline
+A few small edits needed to make this work.
+
+### Delete line 194 (affects folder names for the channels on rclone remote):
+ytdlrc/ytdlrc
+
+Line 194 in af7ef72
+
+    `   --restrict-filenames \ 
+### Delete line 220 (affects filenames of downloaded videos and metadata):
+ytdlrc/ytdlrc
+
+Line 220 in af7ef72
+
+` --restrict-filenames \ 
+Change '{}' to {} on line 211:
+
+` - '{}' '${rclone_destination%/}/${video_value}' \
+` + {} '${rclone_destination%/}/${video_value}' \
+ ytdlrc/ytdlrc
+
+Line 211 in af7ef72
+
+       '{}' '${rclone_destination%/}/${video_value}' \ 
+
+
+
 ## Requirements
 
 *   [coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
